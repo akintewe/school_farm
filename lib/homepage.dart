@@ -1,5 +1,3 @@
-import 'package:card_swiper/card_swiper.dart';
-import 'package:elastic_drawer/elastic_drawer.dart';
 import 'package:farm_project/chatpage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -22,10 +20,7 @@ class _HomePageState extends State<HomePage> {
           elevation: 0,
         ),
         floatingActionButton: FloatingActionButton.extended(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: ((context) => ChatPage())));
-          },
+          onPressed: () {},
           backgroundColor: Colors.green[800],
           label: Row(
             children: [
@@ -230,7 +225,7 @@ class _HomePageState extends State<HomePage> {
                 height: 40,
               ),
               Container(
-                height: MediaQuery.of(context).size.height,
+                height: MediaQuery.of(context).size.height * 5,
                 decoration: BoxDecoration(
                     color: Color.fromRGBO(204, 234, 105, 1),
                     borderRadius: BorderRadius.only(
@@ -320,7 +315,7 @@ class _HomePageState extends State<HomePage> {
                               child: Column(
                                 children: [
                                   Image.asset(
-                                    'assets/images/farm1.png',
+                                    'assets/images/poultry.jpeg',
                                     fit: BoxFit.contain,
                                   ),
                                   SizedBox(
@@ -330,7 +325,7 @@ class _HomePageState extends State<HomePage> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        'Farmer\'s Market',
+                                        'Poultry Market',
                                         style: TextStyle(
                                             color: Color.fromRGBO(
                                                 204, 234, 105, 1),
@@ -346,7 +341,7 @@ class _HomePageState extends State<HomePage> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        'January 20, 2018',
+                                        'January 19, 2019',
                                         style: TextStyle(
                                             color: Colors.white, fontSize: 20),
                                       )
@@ -455,7 +450,78 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       ),
-                    )
+                    ),
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.8,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(5),
+                          topRight: Radius.circular(5),
+                        ),
+                        color: Colors.black,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            'Products You\'ll love',
+                            style: TextStyle(
+                                color: Color.fromRGBO(204, 234, 105, 1),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 25),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            'Wholesome Products Straight from the Farm',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 17),
+                          ),
+                          SizedBox(
+                            height: 30,
+                          ),
+                          Text(
+                            'Homemade Jams',
+                            style: TextStyle(
+                                color: Color.fromRGBO(204, 234, 105, 1),
+                                fontSize: 17),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                '  Pick up your Homemade Jams from\nLandmark University. We have been told by\n   many of our customers that they simply\n  love our Homemade Jams, and we can’t\n                      say we blame them.\n                       That’s because\neverything we grow at Landmark University\nis grown with love, so our food looks better,\nsmells better, and tastes better. Try it out\n                                yourself.',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.3,
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            child: Image.asset(
+                              'assets/images/poultry.jpeg',
+                              fit: BoxFit.fill,
+                            ),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20)),
+                          )
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
